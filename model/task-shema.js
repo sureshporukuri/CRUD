@@ -12,12 +12,10 @@ mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
     });
 
 const taskSchema = new mongoose.Schema({
+    id: Number,
     title: String,
-    author: String,
-    year: Number,
-    isbn: String,
-    pages: Number,
-    language: String
+    description: String,
+    completed: String
 });
 
 const Task = mongoose.model('Task', taskSchema);
